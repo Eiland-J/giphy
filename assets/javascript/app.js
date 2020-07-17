@@ -26,7 +26,7 @@ $(document).ready(function() {
             ///Adds a button for each movie of the array
             for (var i = 0 ; i < movies.length ; i++ ) {    
                 var button = $('<button data-movie="'+ movies[i] +'"type="button" id="movieBtn" class="btn btn-info">' + movies[i]+ '</button>');
-                //$('#popup-btn').append(button);
+                $('#popup-btn').append(button);
                 
             }
             }); 
