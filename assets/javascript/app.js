@@ -52,27 +52,34 @@ $(document.body).on('click', '#movieBtn' , function () {
             
         console.log(response);
 
-        var movieResult = response.data;    //Creating movieResult variable to store the data from the response call
+        //Store results
+        var movieResult = response.data;    
     
-            for (var i= 0; i < movieResult.length ; i++) {  //Creating a loop for response data from GIPHY
+            for (var i= 0; i < movieResult.length ; i++) {  
     
-            var movieDiv = $('<div>');  //Creating a new div and store the info inside movidDiv variable
+        //p
+            var movieDiv = $('<div>');  
             var p = $('<p>');           //Creating a paragraph tag to display the rating
+        
+            //Tried to make it more legible 
+            //document.getElementById("<p>").style.color = 'blue';
+
+              
 
             $(p).append('Rating:' + ' ' + movieResult[i].rating);
         
-            var movieGif = $('<img class= "gif_click">');   //Creating <img> tag and store the gifs in movieGif variable
+            var movieGif = $('<img class= "gif_click">');  
 
-            $(movieGif).attr("src", movieResult[i].images.fixed_height_still.url);          //Provide url attribute to the img fixed_height_still.url make the gif appear to be still
-            $(movieGif).attr({"data-animate" : movieResult[i].images.fixed_height.url});    //fixed_height.url is animated gif
-            $(movieGif).attr({'data-state': 'still'});                                      //Provide data-sate attribute to the img
-            $(movieGif).attr({"data-still": movieResult[i].images.fixed_height_still.url}); //Provide data-still attribute to the img. 
+            $(movieGif).attr("src", movieResult[i].images.fixed_height_still.url);          
+            $(movieGif).attr({"data-animate" : movieResult[i].images.fixed_height.url});    
+            $(movieGif).attr({'data-state': 'still'});                                     
+            $(movieGif).attr({"data-still": movieResult[i].images.fixed_height_still.url}); 
 
 
-            $(movieDiv).append(movieGif);       //Append the movieGif variable to movieDiv
-            $(movieDiv).append(p)               //Append p to movieDiv      
+            $(movieDiv).append(movieGif);       
+            $(movieDiv).append(p)                
 
-            $('#gif-display').prepend(movieDiv); //Append movieDiv into DOM #gif-display 
+            $('#gif-display').prepend(movieDiv); 
 
             }
             }) 
