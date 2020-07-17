@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Giftastic Movie Search</title>
+
+
+        <meta charset="UTF-8">
+        
+
+        <!-- Making the page mobile responsive -->
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+
+        <!-- Linking BootStrap to  HTML -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+
+         <!-- Adding JQuery Library -->
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+         <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+
+        <!-- External link to CSS style -->
+         <link rel="stylesheet" href="assets/css/style.css">
+
+    </head>
+
+    <body style="background-image: url(assets/images/css-background-effects-thumb.jpg);">
+
+        <div class="container">
+
+            <!-- Button popup Row -->
+            <div id="popup-btn" class="row"></div>
+
+            <!-- Gif picture + Search box -->
+            <div class="row">
+
+              <div id="gif-display" class="col-8"></div>
+
+              <div class="col-4">
+                  <h2>Add a movie!</h2>
+
+                  <!-- Adding search box -->
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-default">Add a movie button! </span>
+                    </div>
+                    <input id="searchbox" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  </div>
+                  
+                  <!-- Adding Search Button -->
+                  <button id ="search-btn" type="button" class="btn btn-dark">Search</button>
+              </div>
+            </div>
+
+        </div>
+
+        <!-- Link to the Javascript file -->
+        <script src="assets/javascript/app.js"></script>
+
+    </body>
+</html>
